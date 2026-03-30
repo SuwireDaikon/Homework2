@@ -35,10 +35,12 @@ public class Main {
 
         byte bottleMachineProduced2Min = 16;
         int bottleMachineProduced = bottleMachineProduced2Min / 2;
+        byte hour = 60; //minutes
+        int hour24 = hour * 24;
         System.out.println("За 20 минут машина произвела " + bottleMachineProduced * 20 + " штук бутылок");
-        System.out.println("За сутки машина произвела " + bottleMachineProduced * 24 + " штук бутылок");
-        System.out.println("За три дня машина произвела " + bottleMachineProduced * 24 * 3 + " штук бутылок");
-        System.out.println("За месяц машина произвела " + bottleMachineProduced * 24 * 30 + " штук бутылок");
+        System.out.println("За сутки машина произвела " + bottleMachineProduced * hour24 + " штук бутылок");
+        System.out.println("За три дня машина произвела " + bottleMachineProduced * hour24 * 3 + " штук бутылок");
+        System.out.println("За месяц машина произвела " + bottleMachineProduced * hour24 * 30 + " штук бутылок");
 
         byte cansBoth = 120;
         byte weUseWhite = 2;
