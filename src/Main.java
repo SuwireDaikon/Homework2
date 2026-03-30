@@ -33,34 +33,19 @@ public class Main {
         int paperForEach = paperBought / (adepts1 + adepts2 + adepts3);
         System.out.println("На каждого ученика рассчитано " + paperForEach + " листов бумаги");
 
-        // 20min, hour24, 3 hour24 and 30 hour24
-        int bottleMachineProduced20min;
-        int bottleMachineProducedHour24;
-        int bottleMachineProduced3Hour24;
-        int bottleMachineProduced30Hour24;
-        //
         byte bottleMachineProduced2Min = 16;
         int bottleMachineProduced = bottleMachineProduced2Min / 2;
-        byte hour = 60; //minutes
-        int hour24 = hour * 24;
-        bottleMachineProduced20min = bottleMachineProduced * 20;
-        bottleMachineProducedHour24 = bottleMachineProduced * hour24;
-        bottleMachineProduced3Hour24 = bottleMachineProduced * hour24 * 3;
-        bottleMachineProduced30Hour24 = bottleMachineProduced * hour24 * 30;
-        System.out.println("За 20 минут машина произвела " + bottleMachineProduced20min + " штук бутылок");
-        System.out.println("За сутки машина произвела " + bottleMachineProducedHour24 + " штук бутылок");
-        System.out.println("За три дня машина произвела " + bottleMachineProduced3Hour24 + " штук бутылок");
-        System.out.println("За месяц машина произвела " + bottleMachineProduced30Hour24 + " штук бутылок");
+        System.out.println("За 20 минут машина произвела " + bottleMachineProduced * 20 + " штук бутылок");
+        System.out.println("За сутки машина произвела " + bottleMachineProduced * 24 + " штук бутылок");
+        System.out.println("За три дня машина произвела " + bottleMachineProduced * 24 * 3 + " штук бутылок");
+        System.out.println("За месяц машина произвела " + bottleMachineProduced * 24 * 30 + " штук бутылок");
 
         byte cansBoth = 120;
-        int studentRooms;
         byte weUseWhite = 2;
         byte weUseBrown = 4;
-        int cansWhite;
-        int cansBrown;
-        studentRooms = cansBoth / (weUseWhite + weUseBrown);
-        cansWhite = studentRooms * weUseWhite;
-        cansBrown = studentRooms * weUseBrown;
+        int studentRooms = cansBoth / (weUseWhite + weUseBrown);
+        int cansWhite = studentRooms * weUseWhite;
+        int cansBrown = studentRooms * weUseBrown;
         System.out.println("В школе, где " + studentRooms + " классов, нужно " + cansWhite + " банок белой краски и " + cansBrown + " банок коричневой краски");
 
         //grams
