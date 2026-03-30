@@ -2,93 +2,113 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        //System.out.println("Hello and welcome!");
 
-        //variables
-        var dog = 8.0;
-        var cat = 3.6;
-        var paper = 763789;
-
-        System.out.println("perro = " + dog);
-        System.out.println("neko = " + cat);
-        System.out.println("feuille = " + paper);
-
-        // inconvenient or useless for this task
-        //var plus4 = 4; // 4.0 paper output = 763793.0
+        byte nu = 127;
+        short num = 32000;
+        int number = 2123456789;
+        long numberNumber = 999921323456789999L;
+        float floatNumber = 12344321.1289346457f;
+        double floatNumberFloat = 43211234.124235235623463f;
         //
+        System.out.println("Значение переменной с типом byte равно " + nu);
+        System.out.println("Значение переменной с типом short равно " + num);
+        System.out.println("Значение переменной с типом int равно " + number);
+        System.out.println("Значение переменной с типом long равно " + numberNumber);
+        System.out.println("Значение переменной с типом float равно " + floatNumber);
+        System.out.println("Значение переменной с типом double равно " + floatNumberFloat);
 
-        dog = dog + 4;
-        cat = cat + 4;
-        paper = paper + 4;
-        System.out.println("perron = " + dog);
-        System.out.println("daineko = " + cat);
-        System.out.println("une grande feuille = " + paper);
+        float first = 27.12f;
+        long second = 987678965549L;
+        short third = 2786;
+        short fourth = 569;
+        short fifth = -159;
+        short sixth = 27897;
+        byte seventh = 67;
+        System.out.println("Init: " + first + ", " + second + ", " + third + ", " + fourth + ", " + fifth + ", " + sixth + ", " + seventh + ".");
 
-        dog = dog - 3.5;
-        cat = cat - 1.6;
-        paper = paper - 7639;
-        System.out.println("perrito = " + dog);
-        System.out.println("neko no mimi = " + cat);
-        System.out.println("petite feuille = " + paper);
+        byte adepts1 = 23;
+        byte adepts2 = 27;
+        byte adepts3 = 30;
+        short paperBought = 480;
+        int paperForEach = paperBought / (adepts1 + adepts2 + adepts3);
+        System.out.println("На каждого ученика рассчитано " + paperForEach + " листов бумаги");
 
-
-        // it works just fine, but it won't memorize new data
-        //System.out.println(dog + plus4);
-        //System.out.println(cat + plus4);
-        //System.out.println(paper + plus4);
+        // 20min, hour24, 3 hour24 and 30 hour24
+        int bottleMachineProduced20min;
+        int bottleMachineProducedHour24;
+        int bottleMachineProduced3Hour24;
+        int bottleMachineProduced30Hour24;
         //
+        byte bottleMachineProduced2Min = 16;
+        int bottleMachineProduced = bottleMachineProduced2Min / 2;
+        byte hour = 60; //minutes
+        int hour24 = hour*24;
+        bottleMachineProduced20min = bottleMachineProduced * 20;
+        bottleMachineProducedHour24 = bottleMachineProduced * hour24;
+        bottleMachineProduced3Hour24 = bottleMachineProduced * hour24 * 3;
+        bottleMachineProduced30Hour24 = bottleMachineProduced * hour24 * 30;
+        System.out.println("За 20 минут машина произвела " + bottleMachineProduced20min +" штук бутылок");
+        System.out.println("За сутки машина произвела " + bottleMachineProducedHour24 +" штук бутылок");
+        System.out.println("За три дня машина произвела " + bottleMachineProduced3Hour24 +" штук бутылок");
+        System.out.println("За месяц машина произвела " + bottleMachineProduced30Hour24 +" штук бутылок");
 
-        // it works just fine, but it won't memorize new data
-        //System.out.println(dog - 3.5);
-        //System.out.println(cat - 1.6);
-        //System.out.println(paper - 7639);
-        //
+        byte cansBoth = 120;
+        int studentRooms;
+        byte weUseWhite = 2;
+        byte weUseBrown = 4;
+        int cansWhite;
+        int cansBrown;
+        studentRooms = cansBoth / (weUseWhite + weUseBrown);
+        cansWhite = studentRooms * weUseWhite;
+        cansBrown = studentRooms * weUseBrown;
+        System.out.println("В школе, где " + studentRooms + " классов, нужно " + cansWhite + " банок белой краски и " + cansBrown + " банок коричневой краски");
 
-        var friend = 19;
-        System.out.println("Hay un amigo in mi : " + friend);
-        friend = friend * 2;
-        System.out.println("Hay un amigo in mi : " + friend);
-        friend = friend / 7;
-        System.out.println("Or italian amico... = " + friend);
+        //grams
+        byte banana = 80;
+        float milk = 105f; // ml = 100
+        byte iceCream = 100;
+        byte rawEggs = 70;
+        //recipe
+        byte bananaQuantity = 5;
+        float milkRQ = 200f; //ml
+        byte iceCreamQuantity = 2;
+        byte rawEggsQuantity = 4;
+        //recipeGrams
+        float recipeCocktailWeightG = (banana * bananaQuantity) + (milk*milkRQ)/100 + (iceCream * iceCreamQuantity) + (rawEggs * rawEggsQuantity);
+        float recipeCocktailWeightKg = recipeCocktailWeightG / 1000;
+        System.out.println("Result in grams: " + recipeCocktailWeightG + ", result in kg: " + recipeCocktailWeightKg);
 
-        var frog = 3.5;
-        System.out.println( "kwa = " + frog);
-        frog = frog * 10;
-        System.out.println("kwa = " + frog);
-        frog = frog / 3.5;
-        System.out.println("kwa = " + frog);
-        frog = frog + 4;
-        System.out.println("kwa = " + frog); // ? if System.out.println("kwa = " + frog + 4), then output will be 10.04
+        byte needToSlim = 7; //kg
+        short lose250 = 250; //g
+        short lose500 = 500;
+        int needToSlimG = needToSlim * 1000;
+        int daysWithLose250 = needToSlimG / lose250;
+        int daysWithLose500 = needToSlimG / lose500;
+        int daysMed = (daysWithLose250 + daysWithLose500) / 2;
+        System.out.println("Days if weight loss = 250: " + daysWithLose250 + ", days if weight loss = 500: " + daysWithLose500 + ", days on average: " + daysMed);
 
-        var fighterWeight = 78.2;
-        var fighterWeight1 = 82.7;
-        var weightSum = fighterWeight1 + fighterWeight;
-        System.out.println("Sum of boxer's weights = " + weightSum);
-        var weightDif = fighterWeight1 - fighterWeight;
-        System.out.println("Difference of weights = " + weightDif);
+        float salaryMasha = 67760;
+        float salaryDen = 83690;
+        float salaryChristine = 76230;
+        float salaryUpPercent = 0.1f;
+        float salaryUpMasha = salaryMasha * salaryUpPercent;
+        float salaryUpDen = salaryDen * salaryUpPercent;
+        float salaryUpChristine = salaryChristine * salaryUpPercent;
+        float salaryYearMashaBefore = salaryMasha * 12;
+        float salaryYearDenBefore = salaryDen * 12;
+        float salaryYearChristineBefore = salaryChristine * 12;
+        salaryMasha = salaryMasha + salaryUpMasha;
+        salaryDen = salaryDen + salaryUpDen;
+        salaryChristine = salaryChristine + salaryUpChristine;
+        float salaryYearMashaAfter = salaryMasha * 12;
+        float salaryYearDenAfter = salaryDen * 12;
+        float salaryYearChristineAfter = salaryChristine * 12;
+        float salaryGrowthMasha = salaryYearMashaAfter - salaryYearMashaBefore;
+        float salaryGrowthDen = salaryYearDenAfter - salaryYearDenBefore;
+        float salaryGrowthChristine = salaryYearChristineAfter - salaryYearChristineBefore;
+        System.out.println("Маша теперь получает " + salaryMasha + " рублей. Годовой доход вырос на " + salaryGrowthMasha + " рублей");
+        System.out.println("Денис теперь получает " + salaryDen + " рублей. Годовой доход вырос на " + salaryGrowthDen + " рублей");
+        System.out.println("Кристина теперь получает " + salaryChristine + " рублей. Годовой доход вырос на " + salaryGrowthChristine + " рублей");
 
-        var remainderWeight = fighterWeight1 % fighterWeight;
-        System.out.println("remainder % = " + remainderWeight); // ?
-
-        var workHours = 640;
-        var powerWorkEmploy = 8; // in hours
-        var amountOfEmployers = workHours / powerWorkEmploy;
-        System.out.println("Всего работников в компании - " + amountOfEmployers +  " человек ");
-        var newcomers = 94;
-        amountOfEmployers = amountOfEmployers + newcomers;
-        workHours = amountOfEmployers * powerWorkEmploy;
-        System.out.println("Если в компании работает " + amountOfEmployers + " человек, то всего " + workHours + " часов работы может быть поделено между сотрудниками");
-
-
-
-
-
-        //for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            //System.out.println("i = " + i);
-        //}
     }
 }
