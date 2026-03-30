@@ -3,22 +3,21 @@
 public class Main {
     public static void main(String[] args) {
 
+        int number = 2123456789;
         byte nu = 127;
         short num = 32000;
-        int number = 2123456789;
-        long numberNumber = 999921323456789999L;
+        long numberNumber = 999999999999999L;
         float floatNumber = 12344321.1289346457f;
         double floatNumberFloat = 43211234.124235235623463f;
-
+        System.out.println("Значение переменной с типом int равно " + number);
         System.out.println("Значение переменной с типом byte равно " + nu);
         System.out.println("Значение переменной с типом short равно " + num);
-        System.out.println("Значение переменной с типом int равно " + number);
         System.out.println("Значение переменной с типом long равно " + numberNumber);
         System.out.println("Значение переменной с типом float равно " + floatNumber);
         System.out.println("Значение переменной с типом double равно " + floatNumberFloat);
 
         float first = 27.12f;
-        long second = 987678965549L;
+        long second = 987678965549L; //987 678 965 549
         short third = 2786;
         short fourth = 569;
         short fifth = -159;
@@ -78,21 +77,15 @@ public class Main {
         float salaryDen = 83690;
         float salaryChristine = 76230;
         float salaryUpPercent = 0.1f;
-        float salaryUpMasha = salaryMasha * salaryUpPercent;
-        float salaryUpDen = salaryDen * salaryUpPercent;
-        float salaryUpChristine = salaryChristine * salaryUpPercent;
         float salaryYearMashaBefore = salaryMasha * 12;
         float salaryYearDenBefore = salaryDen * 12;
         float salaryYearChristineBefore = salaryChristine * 12;
-        salaryMasha = salaryMasha + salaryUpMasha;
-        salaryDen = salaryDen + salaryUpDen;
-        salaryChristine = salaryChristine + salaryUpChristine;
-        float salaryYearMashaAfter = salaryMasha * 12;
-        float salaryYearDenAfter = salaryDen * 12;
-        float salaryYearChristineAfter = salaryChristine * 12;
-        float salaryGrowthMasha = salaryYearMashaAfter - salaryYearMashaBefore;
-        float salaryGrowthDen = salaryYearDenAfter - salaryYearDenBefore;
-        float salaryGrowthChristine = salaryYearChristineAfter - salaryYearChristineBefore;
+        salaryMasha = salaryMasha + salaryMasha * salaryUpPercent; // init + percent
+        salaryDen = salaryDen + salaryDen * salaryUpPercent;
+        salaryChristine = salaryChristine + salaryChristine * salaryUpPercent;
+        float salaryGrowthMasha = salaryMasha * 12 - salaryYearMashaBefore; // after - before
+        float salaryGrowthDen = salaryDen * 12 - salaryYearDenBefore;
+        float salaryGrowthChristine = salaryChristine * 12 - salaryYearChristineBefore;
         System.out.println("Маша теперь получает " + salaryMasha + " рублей. Годовой доход вырос на " + salaryGrowthMasha + " рублей");
         System.out.println("Денис теперь получает " + salaryDen + " рублей. Годовой доход вырос на " + salaryGrowthDen + " рублей");
         System.out.println("Кристина теперь получает " + salaryChristine + " рублей. Годовой доход вырос на " + salaryGrowthChristine + " рублей");
