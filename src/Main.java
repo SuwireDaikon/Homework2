@@ -42,15 +42,15 @@ public class Main {
         byte bottleMachineProduced2Min = 16;
         int bottleMachineProduced = bottleMachineProduced2Min / 2;
         byte hour = 60; //minutes
-        int hour24 = hour*24;
+        int hour24 = hour * 24;
         bottleMachineProduced20min = bottleMachineProduced * 20;
         bottleMachineProducedHour24 = bottleMachineProduced * hour24;
         bottleMachineProduced3Hour24 = bottleMachineProduced * hour24 * 3;
         bottleMachineProduced30Hour24 = bottleMachineProduced * hour24 * 30;
-        System.out.println("За 20 минут машина произвела " + bottleMachineProduced20min +" штук бутылок");
-        System.out.println("За сутки машина произвела " + bottleMachineProducedHour24 +" штук бутылок");
-        System.out.println("За три дня машина произвела " + bottleMachineProduced3Hour24 +" штук бутылок");
-        System.out.println("За месяц машина произвела " + bottleMachineProduced30Hour24 +" штук бутылок");
+        System.out.println("За 20 минут машина произвела " + bottleMachineProduced20min + " штук бутылок");
+        System.out.println("За сутки машина произвела " + bottleMachineProducedHour24 + " штук бутылок");
+        System.out.println("За три дня машина произвела " + bottleMachineProduced3Hour24 + " штук бутылок");
+        System.out.println("За месяц машина произвела " + bottleMachineProduced30Hour24 + " штук бутылок");
 
         byte cansBoth = 120;
         int studentRooms;
@@ -74,7 +74,7 @@ public class Main {
         byte iceCreamQuantity = 2;
         byte rawEggsQuantity = 4;
         //recipeGrams
-        float recipeCocktailWeightG = (banana * bananaQuantity) + (milk*milkRQ)/100 + (iceCream * iceCreamQuantity) + (rawEggs * rawEggsQuantity);
+        float recipeCocktailWeightG = (banana * bananaQuantity) + (milk * milkRQ) / 100 + (iceCream * iceCreamQuantity) + (rawEggs * rawEggsQuantity);
         float recipeCocktailWeightKg = recipeCocktailWeightG / 1000;
         System.out.println("Result in grams: " + recipeCocktailWeightG + ", result in kg: " + recipeCocktailWeightKg);
 
