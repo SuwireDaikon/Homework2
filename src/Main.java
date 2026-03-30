@@ -9,7 +9,7 @@ public class Main {
         long numberNumber = 999921323456789999L;
         float floatNumber = 12344321.1289346457f;
         double floatNumberFloat = 43211234.124235235623463f;
-        //
+
         System.out.println("Значение переменной с типом byte равно " + nu);
         System.out.println("Значение переменной с типом short равно " + num);
         System.out.println("Значение переменной с типом int равно " + number);
