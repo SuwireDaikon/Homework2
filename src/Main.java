@@ -3,11 +3,10 @@
 public class Main {
     public static void main(String[] args) {
 
-        byte age = 19; // input there
-        if (age >= 18) {
-            System.out.println("Если возраст человека равен " + age + ", то он совершеннолетний");
-        }
+        byte age = 18; // input there
         if (age < 18) {
+            System.out.println("Если возраст человека равен " + age + ", то он несовершеннолетний");
+        } else if (age >= 18) {
             System.out.println("Если возраст человека равен " + age + ", то он совершеннолетний");
         }
 
@@ -18,45 +17,42 @@ public class Main {
             System.out.println("На улице " + temp + " градусов, можно идти без шапки");
         }
 
-        short speed = 120; // input there
+        short speed = 60; // input there
         if (speed >= 60) {
             System.out.println("Если скорость " + speed + ", то придется заплатить штраф");
         } else if (speed < 60) {
             System.out.println("Если скорость " + speed + ", то можно ездить спокойно");
         }
 
-        byte ageEdu = 15; // input there
-        if (ageEdu >= 2 || ageEdu <= 6) {
-            System.out.println("Если возраст человека равен " + ageEdu + ", то ему нужно ходить в детский сад");
-        } else if (ageEdu > 7 || ageEdu <= 17) {
-            System.out.println("Если возраст человека равен " + ageEdu + ", то ему нужно ходить в школу");
-        } else if (ageEdu > 18 || ageEdu <= 24) {
-            System.out.println("Если возраст человека равен " + ageEdu + ", то ему нужно ходить в универ");
-        } else if (ageEdu > 25) {
-            System.out.println("Если возраст человека равен " + ageEdu + ", то ему нужно ходить в офис");
+        byte ageEducation = 7; // input there
+        if (ageEducation >= 2 && ageEducation <= 6) {
+            System.out.println("Если возраст человека равен " + ageEducation + ", то ему нужно ходить в детский сад");
+        } else if (ageEducation >= 7 && ageEducation <= 17) {
+            System.out.println("Если возраст человека равен " + ageEducation + ", то ему нужно ходить в школу");
+        } else if (ageEducation >= 18 && ageEducation <= 24) {
+            System.out.println("Если возраст человека равен " + ageEducation + ", то ему нужно ходить в универ");
+        } else if (ageEducation >= 25) {
+            System.out.println("Если возраст человека равен " + ageEducation + ", то ему нужно ходить в офис");
         }
 
-        byte ageAllowed = 13; // input there
-        if (ageAllowed < 5) {
-            System.out.println("Если возраст ребенка равен " + age + ", то ему нельзя кататься на аттракционе");
-        } else if (ageAllowed >=5 || ageAllowed <= 14) {
-            System.out.println("Если возраст ребенка равен " + age + ", то ему можно кататься на аттракционе в сопровождении взрослого");
-        } else if (ageAllowed > 15) {
-            System.out.println("Если возраст ребенка равен " + age + ", то ему можно кататься на аттракционе без сопровождения взрослого");
+        byte agePermission = 5; // input there
+        if (agePermission <= 5) {
+            System.out.println("Если возраст ребенка равен " + agePermission + ", то ему нельзя кататься на аттракционе");
+        } else if (agePermission >= 6 && agePermission <= 14) {
+            System.out.println("Если возраст ребенка равен " + agePermission + ", то ему можно кататься на аттракционе в сопровождении взрослого");
+        } else if (agePermission >= 15) {
+            System.out.println("Если возраст ребенка равен " + agePermission + ", то ему можно кататься на аттракционе без сопровождения взрослого");
         }
 
-        byte seatCapacityAll = 102; // 102
-        byte seatCapacitySit = 60; // 60
-        int seatCapacityStand = seatCapacityAll - seatCapacitySit; //42
-           if (seatCapacitySit == 60 && seatCapacityStand == 42) {
+        byte seatCapacityAll = 102;
+        byte seatCapacitySit = 60;
+        byte testPassengers = 40; // input there
+        if (testPassengers < seatCapacitySit) {
+            System.out.println("Место есть! Сидячие: " + (seatCapacitySit - testPassengers));
+        } else if (testPassengers < seatCapacityAll) {
+            System.out.println("Место есть! Стоячие: " + (seatCapacityAll - testPassengers));
+        } else {
             System.out.println("Места нет...");
-        } else if (seatCapacitySit <= 59 || seatCapacityStand <= 41) {
-            System.out.print("Место есть! ");
-            if (seatCapacitySit <= 59) {
-                System.out.println("Сидячее. ");
-            } else if (seatCapacityStand <= 41) {
-                System.out.println("Стоячее. ");
-            }
         }
 
         int one = 12; // input there
