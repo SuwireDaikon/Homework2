@@ -2,14 +2,72 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.println("Hello and welcome!");
+        boolean clientOS = true; // 0 - iOS, 1 - android
+        if (clientOS) {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        } else if (!clientOS) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        }
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        short clientDeviceYear = 2015;
+        if (clientOS && clientDeviceYear >= 2015) {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        } else if (clientOS && clientDeviceYear < 2015) {
+            System.out.println("Установите lite-версию приложения для Android по ссылке");
+        } else if (!clientOS && clientDeviceYear >= 2015) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else if (!clientOS && clientDeviceYear < 2015) {
+            System.out.println("Установите lite-версию приложения для iOS по ссылке");
+        }
+
+        short year = 2021; // Високосный год кратен 4 или 400, а значит делится нацело (% = 0). Кратные 100 - невисокосные.
+        if (year % 100 == 0) {
+            System.out.println("Невисокосный год");
+        } else if (year % 4 == 0 || year % 400 == 0) {
+            System.out.println("Високосный год");
+        } else if (year % 4 >= 1) {
+            System.out.println("Невисокосный год");
+        }
+
+        byte deliveryDistance = 95; //95
+        int deliveryDays = 1;
+        if (deliveryDistance <= 20) {
+            System.out.println("Срок доставки: " + deliveryDays + " день");
+        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
+            deliveryDays = deliveryDays + 1;
+            System.out.println("Срок доставки: " + deliveryDays + " дня");
+        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
+            deliveryDays = deliveryDays + 2;
+            System.out.println("Срок доставки: " + deliveryDays + " дня");
+        } else {
+            System.out.println("Доставки нет");
+        }
+
+        byte monthNumber = 1;
+        switch (monthNumber) {
+            case 1: //можно и так: case 12,1,2, -> sout();
+            case 12:
+            case 2:
+                System.out.println("Winter");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("Spring");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("Summer");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("Autumn");
+                break;
+            default:
+                System.out.println("Are you crazy?");
+                break;
         }
     }
 }
