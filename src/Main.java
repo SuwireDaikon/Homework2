@@ -2,7 +2,7 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        boolean clientOSisAndroid = true; // 0 - iOS, 1 - android //
+        boolean clientOSisAndroid = true; // 0 - iOS, 1 - android
         if (clientOSisAndroid) {
             System.out.println("Установите версию приложения для Android по ссылке");
         } else if (!clientOSisAndroid) {
