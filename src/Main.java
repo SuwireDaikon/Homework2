@@ -2,21 +2,21 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        boolean isAndroid = true; // 0 - iOS, 1 - android
-        if (isAndroid) {
+        boolean clientOSisAndroid = true; // 0 - iOS, 1 - android
+        if (clientOSisAndroid) {
             System.out.println("Установите версию приложения для Android по ссылке");
-        } else if (!isAndroid) {
+        } else if (!clientOSisAndroid) {
             System.out.println("Установите версию приложения для iOS по ссылке");
         }
 
         short clientDeviceYear = 2015;
-        if (isAndroid && clientDeviceYear >= 2015) {
+        if (clientOSisAndroid && clientDeviceYear >= 2015) {
             System.out.println("Установите версию приложения для Android по ссылке");
-        } else if (isAndroid && clientDeviceYear < 2015) {
+        } else if (clientOSisAndroid && clientDeviceYear < 2015) {
             System.out.println("Установите lite-версию приложения для Android по ссылке");
-        } else if (!isAndroid && clientDeviceYear >= 2015) {
+        } else if (!clientOSisAndroid && clientDeviceYear >= 2015) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        } else if (!isAndroid && clientDeviceYear < 2015) {
+        } else if (!clientOSisAndroid && clientDeviceYear < 2015) {
             System.out.println("Установите lite-версию приложения для iOS по ссылке");
         }
 
