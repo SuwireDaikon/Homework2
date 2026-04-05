@@ -2,26 +2,26 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        boolean clientOSisAndroid = true; // 0 - iOS, 1 - android
-        if (clientOSisAndroid) {
+        byte clientOS = 1; // 0 - iOS, 1 - android
+        if (clientOS == 1) {
             System.out.println("Установите версию приложения для Android по ссылке");
-        } else if (!clientOSisAndroid) {
+        } else if (clientOS != 1) {
             System.out.println("Установите версию приложения для iOS по ссылке");
         }
 
         short clientDeviceYear = 2015;
-        if (clientOSisAndroid && clientDeviceYear >= 2015) {
+        if (clientOS == 1 && clientDeviceYear >= 2015) {
             System.out.println("Установите версию приложения для Android по ссылке");
-        } else if (clientOSisAndroid && clientDeviceYear < 2015) {
+        } else if (clientOS == 1 && clientDeviceYear < 2015) {
             System.out.println("Установите lite-версию приложения для Android по ссылке");
-        } else if (!clientOSisAndroid && clientDeviceYear >= 2015) {
+        } else if (clientOS != 1 && clientDeviceYear >= 2015) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        } else if (!clientOSisAndroid && clientDeviceYear < 2015) {
+        } else if (clientOS != 1 && clientDeviceYear < 2015) {
             System.out.println("Установите lite-версию приложения для iOS по ссылке");
         }
 
         short year = 2021; // Високосный год кратен 4 или 400, а значит делится нацело (% = 0). Кратные 100 (но не 400) - невисокосные.
-        if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) {
+        if (( year > 1584 && year % 400 == 0) || ( year > 1584 && year % 4 == 0 && year % 100 != 0)) { // (year > 1584 && ((year % 400 == 0) || ( year % 4 == 0 && year % 100 != 0)))
             System.out.println("Високосный");
         } else {
             System.out.println("Невисокосный");
