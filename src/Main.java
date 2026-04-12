@@ -3,50 +3,80 @@
 public class Main {
     public static void main(String[] args) {
 
-        for (int i = 1; i <= 10; i++) {
-            System.out.println("i = " + i);
+        int firstFriday = 3;
+        for (int i = 1; i <= 31; i++) {
+            if (i >= firstFriday && (i - firstFriday) % 7 == 0) {
+                System.out.println("Сегодня пятница, " + i +  "-е число. Необходимо подготовить отчет");
+            }
         }
 
-        for (int i = 10; i >= 1; i--) {
-            System.out.println("i = " + i);
+        int distance = 0;
+        int marathonDistance = 42195;
+        do {
+            System.out.println("Держитесь! Осталось " + (marathonDistance - distance) + " метров!");
+            distance += 500;
+        } while ( distance <= marathonDistance);
+        //
+        int marathonTrackLength = 42195;
+        for (int trackLength = 0; trackLength <= marathonTrackLength; trackLength += 500) {
+            System.out.println("Держитесь! Осталось " + (marathonTrackLength - trackLength) + " метров!");
         }
 
-        for (int i = 2; i <= 17; i += 2) {
-            System.out.println("Чётные числа до 17: " + i);
+        int budget = 1000;
+        int day = 0;
+        while (budget >= 100) {
+            day++;
+            if (day % 5 == 0) {
+                continue;
+            }
+            budget -= 100;
+            if (budget < 100) {
+                System.out.println("You can stay for " + day + " days");
+            }
+        }
+        //
+        int budget2 = 1000;
+        for (int days = 0; budget2 >= 100; days++) {
+            if (days % 5 == 0) {
+                continue;
+            }
+            budget2 -= 100;
+            if (budget2 < 100) {
+                System.out.println("You can stay for " + days + " days");
+            }
         }
 
-        for (int i = 10; i >= -10; i--) {
-            System.out.println("i от большего к меньшему = " + i);
+        short month = 0;
+        float total = 0;
+        while (true) {
+            month++;
+            if (month % 6 == 0) {
+                total = total + (total * 0.07f); // 7% to total
+            }
+            total += 15000;
+            System.out.println("month: " + month + ", sum: " + total);
+            if (total >= 12000000) {
+                break;
+            }
         }
 
-        for (int i = 1904; i <= 2096; i += 4) {
-            System.out.println(i);
-        }
-
-        for (int i = 7; i <= 84; i += 7) {
-            System.out.println(i);
-        }
-
-        for (int i = 1; i <= 512; i *= 2) {
-            System.out.println(i);
-        }
-
-        short monthSalary = 29000;
-        float totalSum = 0;
-        for (int i = 1; i <= 12; i++) {
-            System.out.println("Месяц " + i + ", Сумма накоплений = " + (totalSum += monthSalary)); // skip the first
-        }
-
-        float totalSumPercent = 0; // I won't use vars (totalSum) from other task (8), as they are messing the results
-        float monthPercent = 0.01f;
-        for (int i = 1; i <= 12; i++) {
-            float percent = totalSumPercent * monthPercent;
-            totalSumPercent += percent;
-            System.out.println("Месяц " + i + ", Сумма накоплений = " + (totalSumPercent += monthSalary));
-        }
-
-        for (int i = 1; i <= 10; i++) {
-            System.out.println("2 * " + i + " = " + 2 * i);
+        byte charge = 20;
+        short minute = 0;
+        byte overheats = 0;
+        while (charge < 100 && overheats <= 3) {
+            minute++;
+            if (minute % 10 == 0) {
+                overheats++;
+                minute++;
+                System.out.println("Overheated!");
+                continue;
+            }
+            charge += 2;
+            if (overheats > 3) {
+                break;
+            }
+            //System.out.println("min: " + minute + ", charge = " + charge + "%");
+            System.out.println("Время зарядки составило " + minute + " минут");
         }
     }
 }
