@@ -24,6 +24,15 @@ public class Order {
             return false;
         }
 
+        if (basket == null && order.basket == null) {
+            return true;
+        }
+        if (basket == null || order.basket == null) {
+            return false;
+        }
+        if (basket.length != order.basket.length) {
+            return false;
+        }
         for (byte i = 0; i < basket.length; i++) {
             Product a1 = basket[i];
             Product a2 = order.basket[i];
